@@ -20,7 +20,6 @@ export const Header: NextComponentType = () => {
       direction={{ xs: 'column', sm: 'row' }}
       spacing={{ xs: 1, sm: 2, md: 4 }}
       justifyContent="space-between"
-      padding="40px"
     >
       <Box
         style={{
@@ -60,7 +59,7 @@ export const Header: NextComponentType = () => {
             width: '145px',
             borderRadius: '100px',
             textTransform: 'none',
-            backgroundColor: '#1F50FF',
+            backgroundColor: 'secondary.main',
             boxShadow: 'none',
             border: '3px solid transparent',
 

@@ -9,6 +9,9 @@ export const theme = createTheme({
       default: '#DBDCDF',
       paper: '#EFF0F4',
     },
+    secondary: {
+      main: '#1F50FF'
+    }
   },
 
   typography: {

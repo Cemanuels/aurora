@@ -1,8 +1,11 @@
 import React from 'react';
 import { Box, Tabs, Tab } from '@mui/material';
 
+// Icons
 import ExploreIcon from '@mui/icons-material/Explore';
-import HomeIcon from '@mui/icons-material/Home';
+import GraphIcon from '@mui/icons-material/SignalCellularAlt';
+import GridViewIcon from '@mui/icons-material/GridView';
+import NewsPaperIcon from '@mui/icons-material/Newspaper';
 
 interface NavigationProps {}
 
@@ -20,20 +23,32 @@ export const Navigation: React.FunctionComponent<NavigationProps> =
           flexGrow: 1,
           display: 'flex',
           '& button': {
-            mt: '10px',
+            height: '80px',
+            width: '80px',
+            margin: '10px 0',
+            padding: '0',
+            fontSize: '16px',
+
+            '&[aria-selected=true]': {
+              backgroundColor: 'rgba(35, 35, 35, 0.1)',
+              borderRadius: '10px',
+              fontSize: '0'
+            },
           },
         }}
       >
         <Tabs
           orientation="vertical"
           value={value}
+          textColor="secondary"
+          indicatorColor="secondary"
           onChange={handleChange}
-          aria-label="icon label tabs example"
+          aria-label="aurora-navigation"
         >
-          <Tab icon={<HomeIcon />} label="Home" />
-          <Tab icon={<ExploreIcon />} label="Top" />
-          <Tab icon={<ExploreIcon />} label="Services" />
-          <Tab icon={<ExploreIcon />} label="News" />
+          <Tab icon={<ExploreIcon sx={{fontSize: 35}} />} label="Home" />
+          <Tab icon={<GraphIcon sx={{fontSize: 35}} />} label="Top" />
+          <Tab icon={<GridViewIcon sx={{fontSize: 35}} />} label="Services" />
+          <Tab icon={<NewsPaperIcon sx={{fontSize: 35}} />} label="News" />
         </Tabs>
       </Box>
     );
