@@ -1,22 +1,23 @@
-import { NextComponentType } from "next";
+import { NextComponentType } from 'next';
 
-import { Box, Typography, Stack } from "@mui/material";
-import { Avatar } from "../Avatar";
-import { BannerImg } from "../../assets/Icons/Banner";
+import { Box, Typography, Stack } from '@mui/material';
+import { Avatar } from '../Avatar';
+import { BannerImg } from '../../assets/Icons/Banner';
 
 export const Banner: NextComponentType = () => {
   return (
     <Box
       sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
         height: 300,
-        width: "100%",
+        width: '100%',
         backgroundColor: (theme) => theme.palette.secondary.light,
-        borderRadius: "50px",
-        marginLeft: "42px",
-        padding: "73px 0 50px 50px",
+        borderRadius: '50px',
+        marginLeft: '42px',
+        padding: '73px 0 50px 50px',
       }}
     >
       <Stack spacing={2.25}>
@@ -39,7 +40,9 @@ export const Banner: NextComponentType = () => {
           <Avatar />
         </Stack>
       </Stack>
-      <BannerImg />
+      <Box sx={{ position: 'absolute', right: 0 }}>
+        <BannerImg />
+      </Box>
     </Box>
   );
 };
